@@ -1,0 +1,72 @@
+/*
+CREATE TABLE users(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	username VARCHAR2(64) NOT NULL UNIQUE,
+	email VARCHAR2(64) NOT NULL UNIQUE,
+	password_hash VARCHAR2(254) NOT NULL UNIQUEvi
+
+CREATE TABLE artists(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    artist_name VARCHAR(64) NOT NULL UNIQUE
+);
+CREATE TABLE metadata(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    metadata_type VARCHAR(64) NOT NULL UNIQUE,
+    metadata_value VARCHAR(64) NOT NULL UNIQUE
+);
+CREATE TABLE albums(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(64) NOT NULL UNIQUE,
+    artist_id INT,
+    year INT,
+    FOREIGN KEY (artist_id) REFERENCES artists(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE TABLE songs(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    album_id INT,
+    artist_id INT,
+    song_title VARCHAR(64) NOT NULL,
+    number_of_likes INT,
+    uploaded_at TIMESTAMP,
+    FOREIGN KEY (album_id) REFERENCES albums(id)  ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (artist_id) REFERENCES artists(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE TABLE colab(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    artist_id INT,
+    song_id INT,
+    main_contributor BIT,
+    FOREIGN KEY (song_id) REFERENCES songs(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (artist_id) REFERENCES artists(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE TABLE metadata_association(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    song_id INT,
+    metadata_id INT,
+    FOREIGN KEY (metadata_id) REFERENCES metadata(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (song_id) REFERENCES songs(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE TABLE commentaries(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    song_id INT,
+    commentary_text VARCHAR(1024) NOT NULL,
+    created_at TIMESTAMP,
+    FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY(song_id) REFERENCES songs(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+CREATE TABLE preferences(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    song_id INT,
+    FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY(song_id) REFERENCES songs(id) ON DELETE CASCADE ON UPDATE CASCADE
+);
+*/
+CREATE TABLE listeningHistory(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    song_id INT,
+    FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY(song_id) REFERENCES songs(id) ON DELETE CASCADE ON UPDATE CASCADE
+);

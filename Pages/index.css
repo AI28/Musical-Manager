@@ -1,0 +1,23 @@
+@import 'Partials/content-card.css';
+@import 'Partials/nav-bar.css';
+
+body {
+    background-color: white;
+    display: flex;
+    font-family: sans-serif;
+    flex-flow: column wrap;
+    height: 100%;
+    margin: 0;
+}
+
+main {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 80px;
+    justify-content: center;
+    margin:30px 80px;
+    text-align: center;
+}
+
+/* Alexandru Ichim*/

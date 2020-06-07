@@ -1,0 +1,241 @@
+.content-card {
+    background-color: rgba(173, 215, 229, 3);
+    background-size: 236px 398px;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    height: 427px;
+    text-align: center;
+    width: 236px;
+    margin: 15px;
+}
+
+.content-card:hover{
+    border-color: red;
+}
+
+.img {
+    background-size: 236px 257px;
+    border-bottom-color: black;;
+    border-bottom-style: solid;
+    border-width: 2.5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    grid-area: image;
+    height: 257px;
+    padding-bottom: 5px;
+    width: 236px;
+}
+
+.img .user {
+    color: lightgoldenrodyellow;
+    font-weight: 700;
+}
+
+.img .date {
+    color: lightgoldenrodyellow;
+    font-weight: 600;
+    font-size: 0.7em;
+}
+.text {
+    color: white;
+    display: flex;
+    font-size: 0.9em;
+    flex-direction: column;
+    grid-area: text;
+    margin: 25px;
+}
+.meta-data{
+    
+    color: red;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.meta-data a{
+    text-decoration: none;
+}
+
+.musical-production {
+    color: gold;
+    font-weight: 700;
+}
+
+.stats {
+    background-color: pink;
+    border-color: black;
+    border-top-style: solid;
+    border-top-width: 3px;
+    display: grid;
+    grid-area: stats;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 1fr;
+}
+
+.stat {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    justify-content: center;
+    padding: 10px;
+    padding-bottom: 16px;
+}
+
+.stat:hover {
+    background-color: red;
+    cursor: pointer;
+}
+.like-value {
+    font-weight: 700;
+}
+.comment-value{
+    font-weight: 700;
+}
+
+.like-value::after {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: ' \f067';
+}
+
+.comment-value::after {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content:' \f075';
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    height: 100%; /* Full height */
+    left: 0;
+    overflow: hidden; /* Enable scroll if needed */
+    position: fixed; /* Stay in place */
+    top: 0;
+    width: 100%; /* Full width */
+    z-index: 0; /* Sit on top */
+  }
+  
+.comments-modal-content{
+    background-color: #fefefe;
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    margin: 15% auto; /* 15% from the top and centered */
+    width: 50%; /* Could be more or less, depending on screen size */
+}
+
+.comments-modal-content header{
+
+    align-items: start;
+    background-color: pink;
+    display: flex;
+    flex-flow: column wrap;
+    height: 100%;
+    left: 0;
+    margin: 0;
+    top: 0;
+    
+    
+}
+.modal-user-name{
+
+    cursor: pointer;
+    font-weight: 700;
+    order:1;
+}
+.modal-user-name::before{
+
+    background-image: url('/Images/profile-pic.jpg');
+    background-size: 50px 50px;
+    border: solid 3px black;
+    content:'';
+    display:block;
+    height: 50px;
+    width: 50px;
+
+}
+.modal-action{
+    font-weight: 600;
+    order: 4;
+}
+.modal-date{
+    font-weight: 600;
+    margin-top: 0;
+    order: 2;
+    padding-top: 0;
+
+}
+.modal-musical-production{
+
+    cursor: pointer;
+    font-weight: 700;
+    order: 5;
+}
+.modal-meta-data{
+
+    color: white;
+    display: flex;
+    flex-flow: column wrap;
+    font-weight: 700;
+    order: 6;
+}
+.comments-modal-main{
+
+    align-items: flex-start;
+    background-image: url('/Images/pinkfloyd-the-wall.jpg');
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    height: 100%;
+    justify-content: space-between;
+    overflow: auto;
+}
+
+.comments-modal-main p{
+
+    background-color:rgba(173, 215, 229, 3);
+    border-color: black;
+    border-style: solid;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+    text-align: left;
+    width: 80%;
+}
+
+.comments-modal-main p::before{
+    background-image: url('/Images/brian-wilson.jpg');
+    background-size: 50px 50px;
+    border: solid 3px black;
+    content:'';
+    height: 50px;
+    margin-right: 2px;
+    width: 50px;
+}
+.comments-modal-content footer{
+
+    background-color: pink;
+    margin: 0;
+}
+
+.comment-modal-contant form{
+
+    background-color: pink;
+    border: none;
+    font-weight: 700;
+    margin: 0;
+}
+.comments-modal-content form::after{
+
+    color: white;
+    content: ' \f304';
+    cursor: pointer;
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+}
+/* Alexandru Ichim */

@@ -1,0 +1,47 @@
+body{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+}
+header{
+    align-items: center;
+    background-image: url('Images/background.jpeg');
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100vh;
+    justify-content: center;
+}
+header p{
+    font-weight: 600;
+}
+#get-started{
+    border-style:solid;
+    color: white;
+    cursor: pointer;
+    margin-top:60px;
+    padding: 20px;
+    text-decoration: none;
+}
+#section2{
+    display: flex;
+}
+@media(max-width:600px){
+    #section2{
+        flex-wrap: wrap;
+    }
+}
+#section2 p{
+    color: lightgoldenrodyellow;
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 40px;
+}
+main p:nth-child(even){
+    background-color: rgba(173, 215, 229, 3);
+}
+
+main p:nth-child(odd){
+    background-color: pink;
+    color: rgba(173, 215, 229, 3);
+}

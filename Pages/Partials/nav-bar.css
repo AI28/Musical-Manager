@@ -1,0 +1,125 @@
+/* implementeaza navbarul pt mobil cu flex */
+/*
+fisa cerinte proiect:
+    1) html valid
+    2) css valid
+    3) layout responsive
+    4) storyline: "am nevoie de pagina ca sa .... pot ajunge la ea apasand pe butonul x
+        [toate paginile implementate / valide] -- scholarly html [microdate]
+        Motivatia alegerii unor idei de design.
+    5)   */
+nav {
+    background-color: rgba(173, 215, 229, 3);
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+@media (max-width:720px) {
+    .button-list {
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .button-list li{
+        margin-right: 20px;
+    }
+
+    #logo {
+        align-self: center;
+        justify-self: center;
+    }
+}
+
+
+#logo {
+    align-self: center;
+}
+
+#logo img {
+    background-size: 40px 40px;
+    cursor: pointer;
+    height: 40px;
+    padding-left: 3px;
+    width: 40px;
+}
+
+.button-list {
+    display: flex;
+    font-weight: 600;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: center;
+}
+
+.button-list li {
+    align-self: start;
+    cursor: pointer;
+    justify-self: stretch;
+    list-style: none;
+    padding-bottom: 25px;
+    padding-top: 25px;
+}
+
+.button-list li:hover {
+    background-color: rgba(173, 215, 255, 100);
+}
+
+.button-list li a {
+    color: white;
+    margin-top: 10%;
+    text-decoration: none;
+}
+
+.button-list li a:hover{
+    color: red;
+}
+
+@media (min-width:900px) {
+   #account::before{
+       content:'\f2b9';
+       font-family: 'Font Awesome 5 Free';
+       font-weight: 900;
+   }
+    #live::before {
+        content: '\f124';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+    }
+
+    #music::before {
+        content: '\f001';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+    }
+
+    #stats::before {
+        content: '\f201';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+    }
+    #login::before {
+        content: '\f5b7';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+    }
+    #register::before{
+        content: '\f2f6';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+    }
+}
+.sticky{
+    /* fara aceasta proprietate, navbarul ar fi ocupat intreaga suprafata a paginii; probabil intra in conflict cu maniera in care am folosit css grid*/
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+/* Alexandru Ichim */

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8' name="viewport" 
+        content= "width=device-width, initial-scale=1.0">>
+        <title>MuM</title>
+        <link rel="stylesheet" type="text/css" href="registerstylesheet.css"/>
+    </head>
+    <body>
+        <div class="log-reg-modal" id='register-modal'>
+          <form>
+                   <label>LogIn</label><br>
+                   <input type="text" id="username" placeholder="Username"><br>
+                   <hr>
+                   <input type="password" id="passwd" placeholder="Password"><br><hr>
+                   <br>
+                   <input type="submit" placeholder="login" value="Login" id="logInButton">
+          </form>
+        </div>
+        <script>
+
+            function asyncRequest(){
+                var ajaxRequest = new XMLHttpRequest();
+                ajaxRequest.open("POST", "/CNonAuthentificated/Login", true);
+                var toBeJsonized = '{"username" : "' + document.getElementById("username").value +'", "password":"' + document.getElementById("passwd").value + '"}';
+                ajaxRequest.send(toBeJsonized);
+
+                ajaxRequest.onload = function(){
+                    if(this.readyState === 4 && this.status === 200){
+                        handleResponse(this.responseText);
+                    }
+                    else{
+                        console.log(this.responseText);
+                    }
+
+                    console.log(this.responseText);
+                }
+            }
+
+            document.getElementById('logInButton').addEventListener("click",function(event){
+                event.preventDefault();
+            });
+
+            document.getElementById('logInButton').onclick = function(){
+                asyncRequest();
+            }
+            /*test*/
+            function handleResponse(responseText){
+                var jsonResponse = JSON.parse(responseText);
+                var node = document.createElement("p");
+                var text = document.createTextNode(jsonResponse.additionalMessage);
+                console.log(jsonResponse.additionalMessage);
+                var register_modal = document.getElementById('register-modal');
+                switch(jsonResponse.success){
+                    case true:
+                        window.location.href='/test.php';
+                        break;
+                    case false:
+                        if(register_modal.childNodes.length == 3)
+                            register_modal.childNodes[2].textContent = jsonResponse.additionalMessage; 
+                        else register_modal.appendChild(node.appendChild(text));
+                        break;
+                }
+            }
+        </script>
+    </body>
+</html>
+
+<!--Alexandru Ichim-->

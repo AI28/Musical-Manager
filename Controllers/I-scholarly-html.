@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>MuM Interface Documentation</title>
+    </head>
+    <body>
+        <article typeof="https://www.schema.org/ScholarlyArticle">
+            <header>
+                <h1 property="https://www.schema.org/name">Documentatia aferenta interfetei aplicatiei MuM</h1>
+                <p role="doc-subtitle" property="schema:alternateName">O trecere in revista a caracteristicilor aplicatiei</p>
+                <div role="contentinfo">
+                    <h2>Autori</h2>
+                    <ul>
+                        <li typeof='https://www.schema.org/OrganizationRole' property="https://www.schema.org/author">
+                            <span typeof="https://www.schema.org/Person">
+                                <meta property="https://www.schema.org/givenName" content="Alexandru">
+                                <meta property="https://www.schema.org/familyName" content="Ichim">
+                                <span property="https://www.schema.org/name">Alexandru M. Ichim</span>
+                            </span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li property="https://www.schema.org/roleContactPoint" typeof="https://www.schema.org/ContactPoint">
+                            <a href='mailto:alexandru.ichim@nfo.uaic.ro'
+                               property='https://www.schema.org/email'>alexandru.ichim@info.uaic.ro</a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+            <section>
+                <h3>Introducere</h3>
+                <p>Aplicatia MuM, dezvoltata de echipa formata din Stefan Palalae si Alexandru Ichim, are rolul de a agrega metadate muzicale, preluate din diferite surse web, intr-un sistem ce ofera utilizatorilor acestuia posibilitatea de a vizualiza preferintele muzicale ale prietenilor lor si de a fii la curent cu ultimele auditii muzicale si aparitii de albume si cantece. Sistemul isi duce la bun sfarsit menirea utilizand diverse mecanisme ale ecosistemului web, printre care apelarea api-urilor externe, ale unor entitati precum Spotify sau Last.fm, si feed-urile rss, utilizate pentru a tine la curent utilizatorii cu minim de efort din partea acestora.</p>
+            </section>
+            <section>
+                <h3>News-feed</h3>
+                <p>In sectiunea news-feed a aplicatiei, utilizatorul autentificact poate vizualiza ultimele auditii muzicale si ultimele actualizari ale bazei de date de productii a sistemului.
+                    <img itemprop="https://www.schema.org/image" src="" alt="O imagine care prezinta aspectul news-feed-ul unui utilizator autentificat.">
+                </p>
+            </section>
+        </article>
+    </body>
+</html>
