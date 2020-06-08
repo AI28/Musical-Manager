@@ -111,7 +111,7 @@ function addButtonListeners(){
    }
 }
 
-asyncRequest();
+//asyncRequest();
 addButtonListeners();
 
 

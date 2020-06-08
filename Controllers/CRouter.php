@@ -50,8 +50,8 @@ class CRouter{
         $method = $this->requestMethod;
         $uri = $this->requestUri;
         $methodArray = $this->{$method}[$uri];
-        $test = new $methodArray[0];
-        if(isset($this->getArgs) === False)
+        $test = new $methodArray[0]();
+        if((isset($this->getArgs)) === False)
             $test->{$methodArray[1]}();
         else $test->{$methodArray[1]}($this->getArgs);
     }

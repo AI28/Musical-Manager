@@ -6,7 +6,7 @@ use \Firebase\JWT\JWT;
 
 if(isset($_COOKIE['visited-before'])){
     $Router = new CRouter();
-    $Router->get($_SERVER['REQUEST_URI'])->resolve();
+    $Router->{strtolower($_SERVER['REQUEST_METHOD'])}($_SERVER['REQUEST_URI'])->resolve();
 }
 else{
     setcookie('visited-before','true',time()+3600*24*30,'/',"localhost");
