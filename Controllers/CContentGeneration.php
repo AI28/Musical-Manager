@@ -11,7 +11,7 @@ class CContentGeneration{
     }
 
     public function test(){
-        print_r($this->contentModel->getMusicalCatalogue(1));
+        print_r($this->authModel->decodeJWTArray($_COOKIE['jwt_token']));
     }
     public function likeSong(){
 
@@ -27,7 +27,22 @@ class CContentGeneration{
             echo json_encode($this->contentModel->likeSong($candidate_song->artist_name, $candidate_song->song_title));
         }
     }
-    public function getProductions($offset){
+
+    public function playSong(){
+        $json_array = NULL;
+        $jwt_array = $this->authModel->decodeJWTArray($_COOKIE['jwt_token']);
+        if(isset($_COOKIE['jwt_token'])===FALSE){
+            http_response_code(401);
+            $json_array = array('success'=>'false','message'=>'Please authentify yourself.');
+        }
+        else{
+            $input = file_get_contents("php://input");
+            $candidate_song = json_decode($input);
+            http_response_code(200);
+            echo json_encode($this->contentModel->playSong($candidate_song->artist_name, $candidate_song->song_title, ($jwt_array->data->id)));
+        }
+    }
+    public function getProductions($offset=0){
         $json_array = NULL;
         if(isset($_COOKIE['jwt_token'])==False){ 
             http_response_code(401);

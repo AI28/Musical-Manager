@@ -24,31 +24,6 @@
             Concluzie: continut care nu se modifica: generat pe partea de server
                        continut care se modifica generat pe partea de client-->
         <main>
-           
-            <div class='content-card'>
-                    <div class='img'><img src='/Images/toolundertow.jpg' alt=''>
-                        <span class='user'>Alexandru Ichim</span>
-                        <span class='date'>23 martie 2020</span>
-                    </div>
-                    <div class='text'>
-                        
-                        <span class='action'>a ascultat <span class='musical-production'>Tool Undertow</span></span>
-                        <span class='meta-data'>
-                            <span class='album'>#undertow</span>
-                            <span class='genre'>#prog-metal</span>
-                            <span class='year'>#1991</span>
-                        </span>
-                    </div>
-                    <div class='stats'>
-                        <div class='stat'>
-                            <div class='like-value'>32</div>
-                        </div>
-                        <div class='stat'>
-                            <div class='comment-value'>32</div>
-                        </div>
-                    </div>
-            </div>
-       
         </main>
         <script src='/Pages/Javascript/modal.js'></script>
         <script src='/Pages/Javascript/stickyNav.js'></script>

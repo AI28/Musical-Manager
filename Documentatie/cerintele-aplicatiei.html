@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8>
+    <title>MuM-Specificarea cerintelor </title>
+    <link rel="stylesheet" href="cerinte.css">
+</head>
+<body>
+    <article typeof="https://www.schema.org/ScholarlyArticle">
+        <header>
+            <h1 itemprop="https://www.schema.org/name">Cerintele aplicatiei MuM</h1>
+            <p role="doc-subtitle" itemprop="schema:alternateHTML5">O trecere in revista a caracteristicilor aplicatiei
+            </p>
+            <span role="contentinfo">
+                <h2>Autori</h2>
+                <span>
+                    <ul>
+                        <li typeof=https://www.schema.org/OrganizationRole itemprop="https://www.schema.org/author">
+                            <span typeof="https://www.schema.org/Person">
+                                <meta itemprop="https://www.schema.org/givenHTML5" content="Alexandru">
+                                <meta itemprop="https://www.schema.org/familyHTML5" content="Ichim">
+                                <span itemprop="https://www.schema.org/name">Alexandru M. Ichim</span>
+                            </span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li itemprop="https://www.schema.org/roleContactPoint"
+                            typeof="https://www.schema.org/ContactPoint">
+                            <a href=mailto:alexandru.ichim@nfo.uaic.ro
+                                itemprop=https://www.schema.org/email>alexandru.ichim@info.uaic.ro</a>
+                        </li>
+                    </ul>
+                </span>
+                <span>
+                    <ul>
+                        <li typeof=https://www.schema.org/OrganizationRole itemprop="https://www.schema.org/author">
+                            <span typeof="https://www.schema.org/Person">
+                                <meta itemprop="https://www.schema.org/givenHTML5" content="Stefan">
+                                <meta itemprop="https://www.schema.org/familyHTML5" content="Palalae">
+                                <span itemprop="https://www.schema.org/name">Stefan Palalae</span>
+                            </span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li itemprop="https://www.schema.org/roleContactPoint"
+                            typeof="https://www.schema.org/ContactPoint">
+                            <a href=mailto:stefan.palalae@nfo.uaic.ro
+                                itemprop=https://www.schema.org/email>stefan.palalae@info.uaic.ro</a>
+                        </li>
+                    </ul>
+                </span>
+            </span>
+        </header>
+        <section id=university>
+            <span typeof="https://www.schema.org/CollegeOrUniversity
+                <h3 itemprop="name">Universitatea "Alexandru Ioan Cuza" Iasi, Facultatea de Informatica</h3>
+                <span itemprop="location" itemtype="https://www.schema.org/Place">Universitate Alexandru Ioan Cuza
+                    Corpul C </span>
+                <span itemprop="address" itemtype="https://www.schema.org/PostalAddress">
+                    <span itemprop="addressLocality">Iasi </span>
+                    <br>
+                    <span itemprop="addressRegion">IS</span>
+                    <br>
+                </span>
+            </span>
+        </section>
+        <section>
+            <span>
+                <h3 itemprop="name">Modulele de inregistrare si autentificare</h3>
+                <p>Modulele de inregistrare si autentificare sunt primele componente ale aplicatiei cu care ca
+                    interactiona utilizatorul. Acestea au o interfata grafica minimala dar eleganta, constand din cate
+                    un simplu <li typeof="www.schema.org/ComputerLanguage""> <span itemprop=" name">HTML5
+            </span><span itemprop="www.schema.org/description">HTML5 is a markup language used for structuring and
+                presenting content on the World Wide Web.</span><span
+                itemprop="www.schema.org/https:">https://www.w3.org/TR/2017/REC-html52-20171214</span></li> Form
+            stilizat folosind <li typeof="www.schema.org/ComputerLanguage""><span itemprop=" name">CSS</span><span
+                    itemprop="www.schema.org/description">Cascading Style Sheets is a style sheet language used for
+                    describing the presentation of a document written in a markup language like HTML</span><span
+                    itemprop="www.schema.org/sameAs">sameAs</span></li>
+            . Functionalitatea consta in trimiterea datelor din formulare la server folosind o cerere asincrona <li
+                typeof="www.schema.org/ComputerLanguage"> <span itemprop="name">Ajax</span><span
+                    itemprop="www.schema.org/description">Ajax is a set of web development techniques using many web
+                    technologies on the client side to create asynchronous web applications. </span><span
+                    itemprop="www.schema.org/sameAs">sameAs</span></li> in format <span
+                typeof="https://schema.org/ComputerLanguage""">
+                <span itemprop="https://schema.org/description">JSON (JavaScript Object Notation) is a lightweight
+                    data-interchange format. It is easy for humans to read and write.</span>
+                <span itemprop="https://schema.org/https:">https://www.json.com</span>
+                <p itemprop="name">JSON</p>
+            </span> iar odata ajunse la server, acestea sunt procesate si clientului ii este intors un raspuns
+            corespunzator. Tehnologii folosite pentru implementarea modulului:<ul>
+                <li typeof="www.schema.org/ComputerLanguage""> <span itemprop=" name">HTML5</span><span
+                        itemprop="www.schema.org/description">HTML5 is a markup language used for structuring and
+                        presenting
+                        content on the World Wide Web.</span><span
+                        itemprop="www.schema.org/https:">https://www.w3.org/TR/2017/REC-html52-20171214</span></li>, <li
+                    typeof="www.schema.org/ComputerLanguage""><span itemprop=" name">CSS</span><span
+                        itemprop="www.schema.org/description">Cascading Style Sheets is a style sheet language used for
+                        describing the presentation of a document written in a markup language like HTML</span><span
+                        itemprop="www.schema.org/sameAs">sameAs</span></li>
+                <li typeof="www.schema.org/ComputerLanguage""> <span itemprop=" name">Javascript</span><span
+                        itemprop="www.schema.org/description">JavaScript, often abbreviated as JS, is a programming
+                        language
+                        that conforms to the ECMAScript specification. </span><span
+                        itemprop="www.schema.org/sameAs">sameAs</span></li>, <li
+                    typeof="www.schema.org/ComputerLanguage">
+                    <span itemprop="name">Ajax</span><span itemprop="www.schema.org/description">Ajax is a set of web
+                        development techniques using many web technologies on the client side to create asynchronous web
+                        applications. </span><span itemprop="www.schema.org/sameAs">sameAs</span></li>, <li
+                    typeof="www.schema.org/ComputerLanguage"> <span itemprop="name">PHP</span><span
+                        itemprop="www.schema.org/description">PHP is a general purpose, object-oriented proramming
+                        language
+                        mainly used in writing server-side scripts.</span><span
+                        itemprop="www.schema.org/sameAs">sameAs</span></li>, <li
+                    typeof="www.schema.org/ComputerLanguage">
+                    <span itemprop="name">Mysql</span><span itemprop="www.schema.org/description">MySQL is an
+                        open-source
+                        relational database management system. Its name is a combination of "My", the name of co-founder
+                        Michael Widenius's daughter, and "SQL", </span><span
+                        itemprop="www.schema.org/sameAs">sameAs</span>
+                </li>, JSON, <li typeof="www.schema.org/ComputerLanguage"> <span itemprop="name">JWT</span><span
+                        itemprop="www.schema.org/description">Json Web Token is an internet standard through which users
+                        can
+                        prove their identity to web services and web apps.</span><span
+                        itemprop="www.schema.org/sameAs">sameAs</span></li>.
+            </ul>
+            </p>
+            </span>
+        </section>
+        <section>
+            <span>
+                <h3 itemprop="name">Dashboard</h3>
+                <p>In dashboard utilizatorul poate vizualiza ultimele activitati consemnate in sistem care pot
+                    reprezenta fie auditia muzicala a unui cantec de catre un utilizator sau grup de utilizatori, fie
+                    incarcarea in sistem a unei noi productii muzicale sau compilatii. Un utilizator autentificat poate
+                    reactiona la aceste activitati, reprezentate de content cards, lasand o apreciere sau un comentariu;
+                    un utilizator anonim poate doar sa vizualizeze dashboardul.
+                </p>
+                <p>Tehnologii folosite:<ul>
+                        <li typeof="www.schema.org/ComputerLanguage""> <span itemprop=" name">HTML5
+            </span><span itemprop="www.schema.org/description">HTML5 is a markup language used for structuring and
+                presenting content on the World Wide Web.</span><span
+                itemprop="www.schema.org/https:">https://www.w3.org/TR/2017/REC-html52-20171214</span></li>
+            <li typeof="www.schema.org/ComputerLanguage""><span itemprop=" name">CSS</span><span
+                    itemprop="www.schema.org/description">Cascading Style Sheets is a style sheet language used for
+                    describing the presentation of a document written in a markup language like HTML</span><span
+                    itemprop="www.schema.org/sameAs">sameAs</span></li>
+            <li typeof="www.schema.org/ComputerLanguage""> <span itemprop=" name">Javascript</span><span
+                    itemprop="www.schema.org/description">JavaScript, often abbreviated as JS, is a programming language
+                    that conforms to the ECMAScript specification. </span><span
+                    itemprop="www.schema.org/sameAs">sameAs</span></li>, <li typeof="www.schema.org/ComputerLanguage">
+                <span itemprop="name">Ajax</span><span itemprop="www.schema.org/description">Ajax is a set of web
+                    development techniques using many web technologies on the client side to create asynchronous web
+                    applications. </span><span itemprop="www.schema.org/sameAs">sameAs</span></li>, <li
+                typeof="www.schema.org/ComputerLanguage"> <span itemprop="name">PHP</span><span
+                    itemprop="www.schema.org/description">PHP is a general purpose, object-oriented proramming language
+                    mainly used in writing server-side scripts.</span><span
+                    itemprop="www.schema.org/sameAs">sameAs</span></li>, <li typeof="www.schema.org/ComputerLanguage">
+                <span itemprop="name">Mysql</span><span itemprop="www.schema.org/description">MySQL is an open-source
+                    relational database management system. Its name is a combination of "My", the name of co-founder
+                    Michael Widenius's daughter, and "SQL", </span><span itemprop="www.schema.org/sameAs">sameAs</span>
+            </li>, JSON, <li typeof="www.schema.org/ComputerLanguage"> <span itemprop="name">JWT</span><span
+                    itemprop="www.schema.org/description">Json Web Token is an internet standard through which users can
+                    prove their identity to web services and web apps.</span><span
+                    itemprop="www.schema.org/sameAs">sameAs</span></li>, Curl, API Spotify, API Last.fm</p>
+            </span>
+        </section>
+        <section>
+            <span>
+                <h itemprop="name">Modal comentarii</h3>
+                    <p>Un utilizator autentificat are acces la sectiunea de comentarii aferente unei activitati
+                        reprezentate in dashboard; ownerul activitatii respective sau al comentariului il pot sterge
+                        ulterior.</p>
+                    <p>Tehnologii folosite:<ul>
+                            <li typeof="www.schema.org/ComputerLanguage""> <span itemprop=" name">HTML5
+            </span><span itemprop="www.schema.org/description">HTML5 is a markup language used for structuring and
+                presenting content on the World Wide Web.</span><span
+                itemprop="www.schema.org/https:">https://www.w3.org/TR/2017/REC-html52-20171214</span></li>
+            <li typeof="www.schema.org/ComputerLanguage""><span itemprop=" name">CSS</span><span
+                    itemprop="www.schema.org/description">Cascading Style Sheets is a style sheet language used for
+                    describing the presentation of a document written in a markup language like HTML</span><span
+                    itemprop="www.schema.org/sameAs">sameAs</span></li>
+            <li typeof="www.schema.org/ComputerLanguage""> <span itemprop=" name">Javascript</span><span
+                    itemprop="www.schema.org/description">JavaScript, often abbreviated as JS, is a programming language
+                    that conforms to the ECMAScript specification. </span><span
+                    itemprop="www.schema.org/sameAs">sameAs</span></li>, <li typeof="www.schema.org/ComputerLanguage">
+                <span itemprop="name">Ajax</span><span itemprop="www.schema.org/description">Ajax is a set of web
+                    development techniques using many web technologies on the client side to create asynchronous web
+                    applications. </span><span itemprop="www.schema.org/sameAs">sameAs</span></li>, <li
+                typeof="www.schema.org/ComputerLanguage"> <span itemprop="name">PHP</span><span
+                    itemprop="www.schema.org/description">PHP is a general purpose, object-oriented proramming language
+                    mainly used in writing server-side scripts.</span><span
+                    itemprop="www.schema.org/sameAs">sameAs</span></li>, <li typeof="www.schema.org/ComputerLanguage">
+                <span itemprop="name">Mysql</span><span itemprop="www.schema.org/description">MySQL is an open-source
+                    relational database management system. Its name is a combination of "My", the name of co-founder
+                    Michael Widenius's daughter, and "SQL", </span><span itemprop="www.schema.org/sameAs">sameAs</span>
+            </li>, JSON, Rest</p>
+            </span>
+        </section <section>
+        <span>
+            <h3 itemprop="name">Pagina de administrare a contului</h3>
+            <p>Un utilizator autentificat isi poate gestiona istoricul activitatii listele de melodii preferate si
+                informatii despre cont dintr-o pagina web dedicata.</p>
+        </span>
+        </section>
+        <section>
+            <h5 itemprop="name">Istoricul auditiilor muzicale</h5>
+            <p>Un utilizator autentificat isi poate vizualiza istoricul auditiilor poate sterge auditii din sistem si
+                comentarii de la respectivele auditii. In plus, utilizatorul poate serializa in formatele CSV si PDF
+                istoricul auditiilor muzicale.</p>
+            <p>Tehnologii foolosite:<ul>
+                    <li typeof="www.schema.org/ComputerLanguage""> <span itemprop=" name">
+                        HTML5</span><span itemprop="www.schema.org/description">HTML5 is a markup language used for
+                            structuring and presenting content on the World Wide Web.</span><span
+                            itemprop="www.schema.org/https:">https://www.w3.org/TR/2017/REC-html52-20171214</span></li>
+                    <li typeof="www.schema.org/ComputerLanguage""><span itemprop=" name">CSS</span><span
+                            itemprop="www.schema.org/description">Cascading Style Sheets is a style sheet language used
+                            for
+                            describing the presentation of a document written in a markup language like HTML</span><span
+                            itemprop="www.schema.org/sameAs">sameAs</span></li>
+                    <li typeof="www.schema.org/ComputerLanguage""> <span itemprop=" name">Javascript</span><span
+                            itemprop="www.schema.org/description">JavaScript, often abbreviated as JS, is a programming
+                            language that conforms to the ECMAScript specification. </span><span
+                            itemprop="www.schema.org/sameAs">sameAs</span></li>, <li
+                        typeof="www.schema.org/ComputerLanguage"> <span itemprop="name">Ajax</span><span
+                            itemprop="www.schema.org/description">Ajax is a set of web development techniques using many
+                            web
+                            technologies on the client side to create asynchronous web applications. </span><span
+                            itemprop="www.schema.org/sameAs">sameAs</span></li>, <li
+                        typeof="www.schema.org/ComputerLanguage"> <span itemprop="name">PHP</span><span
+                            itemprop="www.schema.org/description">PHP is a general purpose, object-oriented proramming
+                            language mainly used in writing server-side scripts.</span><span
+                            itemprop="www.schema.org/sameAs">sameAs</span></li>, <li
+                        typeof="www.schema.org/ComputerLanguage"> <span itemprop="name">Mysql</span><span
+                            itemprop="www.schema.org/description">MySQL is an open-source relational database management
+                            system. Its name is a combination of "My", the name of co-founder Michael Widenius's
+                            daughter,
+                            and "SQL", </span><span itemprop="www.schema.org/sameAs">sameAs</span></li>, JSON, <li
+                        typeof="www.schema.org/ComputerLanguage"> <span itemprop="name">JWT</span><span
+                            itemprop="www.schema.org/description">Json Web Token is an internet standard through which
+                            users
+                            can prove their identity to web services and web apps.</span><span
+                            itemprop="www.schema.org/sameAs">sameAs</span></li>, PDF, CSV
+            </p>
+        </section>
+        <section>
+            <h5 itemprop="name">Exportarea din sistem si importarea in sistem a playlist-urilor utilizatorului</h5>
+            <p>Un utilizator autentificat poate introduce in sistem prin incarcarea unui document in formatul <li
+                    typeof="www.schema.org/ComputerLanguage"> <span itemprop="name">JSPF</span><span
+                        itemprop="www.schema.org/description">JSPF stands for JSON Shareable Playlist Format and is a
+                        data-format for sharing music playlists.</span><span
+                        itemprop="www.schema.org/sameAs">sameAs</span></li>, un playlist propriu; de asemenea, un
+                utilizator autentificat poate serializa in format JSPF playlisturi existente in sistem.</p>
+            <p>Tehologii folosite:<ul>
+                    <li typeof="www.schema.org/ComputerLanguage""> <span itemprop=" name">
+                        HTML5</span><span itemprop="www.schema.org/description">HTML5 is a markup language used for
+                            structuring and presenting content on the World Wide Web.</span><span
+                            itemprop="www.schema.org/https:">https://www.w3.org/TR/2017/REC-html52-20171214</span></li>
+                    <li typeof="www.schema.org/ComputerLanguage""><span itemprop=" name">CSS</span><span
+                            itemprop="www.schema.org/description">Cascading Style Sheets is a style sheet language used
+                            for
+                            describing the presentation of a document written in a markup language like HTML</span><span
+                            itemprop="www.schema.org/sameAs">sameAs</span></li>
+                    <li typeof="www.schema.org/ComputerLanguage""> <span itemprop=" name">Javascript</span><span
+                            itemprop="www.schema.org/description">JavaScript, often abbreviated as JS, is a programming
+                            language that conforms to the ECMAScript specification. </span><span
+                            itemprop="www.schema.org/sameAs">sameAs</span></li>, <li
+                        typeof="www.schema.org/ComputerLanguage"> <span itemprop="name">Ajax</span><span
+                            itemprop="www.schema.org/description">Ajax is a set of web development techniques using many
+                            web
+                            technologies on the client side to create asynchronous web applications. </span><span
+                            itemprop="www.schema.org/sameAs">sameAs</span></li>, <li
+                        typeof="www.schema.org/ComputerLanguage"> <span itemprop="name">PHP</span><span
+                            itemprop="www.schema.org/description">PHP is a general purpose, object-oriented proramming
+                            language mainly used in writing server-side scripts.</span><span
+                            itemprop="www.schema.org/sameAs">sameAs</span></li>, <li
+                        typeof="www.schema.org/ComputerLanguage"> <span itemprop="name">Mysql</span><span
+                            itemprop="www.schema.org/description">MySQL is an open-source relational database management
+                            system. Its name is a combination of "My", the name of co-founder Michael Widenius's
+                            daughter,
+                            and "SQL", </span><span itemprop="www.schema.org/sameAs">sameAs</span></li>, JSON, <li
+                        typeof="www.schema.org/ComputerLanguage"> <span itemprop="name">JWT</span><span
+                            itemprop="www.schema.org/description">Json Web Token is an internet standard through which
+                            users
+                            can prove their identity to web services and web apps.</span><span
+                            itemprop="www.schema.org/sameAs">sameAs</span></li>, <li
+                        typeof="www.schema.org/ComputerLanguage"> <span itemprop="name">JSPF</span><span
+                            itemprop="www.schema.org/description">JSPF stands for JSON Shareable Playlist Format and is
+                            a
+                            data-format for sharing music playlists.</span><span
+                            itemprop="www.schema.org/sameAs">sameAs</span></li>
+            </p>
+        </section>
+        <section>
+            <h5 itemprop="name">Modificarea detaliilor contului</h5>
+            <p>Din aceasta sectiune utilizatorul isi poate schimba numele contului, parola, poza de profil si isi poate
+                radia contul din sistem.</p>
+            <p>Tehnologii folosite:<ul>
+                    <li typeof="www.schema.org/ComputerLanguage""> <span itemprop=" name">
+                        HTML5</span><span itemprop="www.schema.org/description">HTML5 is a markup language used for
+                            structuring and presenting content on the World Wide Web.</span><span
+                            itemprop="www.schema.org/https:">https://www.w3.org/TR/2017/REC-html52-20171214</span></li>
+                    <li typeof="www.schema.org/ComputerLanguage""><span itemprop=" name">CSS</span><span
+                            itemprop="www.schema.org/description">Cascading Style Sheets is a style sheet language used
+                            for
+                            describing the presentation of a document written in a markup language like HTML</span><span
+                            itemprop="www.schema.org/sameAs">sameAs</span></li>
+                    <li typeof="www.schema.org/ComputerLanguage""> <span itemprop=" name">Javascript</span><span
+                            itemprop="www.schema.org/description">JavaScript, often abbreviated as JS, is a programming
+                            language that conforms to the ECMAScript specification. </span><span
+                            itemprop="www.schema.org/sameAs">sameAs</span></li>, <li
+                        typeof="www.schema.org/ComputerLanguage"> <span itemprop="name">Ajax</span><span
+                            itemprop="www.schema.org/description">Ajax is a set of web development techniques using many
+                            web
+                            technologies on the client side to create asynchronous web applications. </span><span
+                            itemprop="www.schema.org/sameAs">sameAs</span></li>, <li
+                        typeof="www.schema.org/ComputerLanguage"> <span itemprop="name">PHP</span><span
+                            itemprop="www.schema.org/description">PHP is a general purpose, object-oriented proramming
+                            language mainly used in writing server-side scripts.</span><span
+                            itemprop="www.schema.org/sameAs">sameAs</span></li>, <li
+                        typeof="www.schema.org/ComputerLanguage"> <span itemprop="name">Mysql</span><span
+                            itemprop="www.schema.org/description">MySQL is an open-source relational database management
+                            system. Its name is a combination of "My", the name of co-founder Michael Widenius's
+                            daughter,
+                            and "SQL", </span><span itemprop="www.schema.org/sameAs">sameAs</span></li>, JSON, <li
+                        typeof="www.schema.org/ComputerLanguage"> <span itemprop="name">JWT</span><span
+                            itemprop="www.schema.org/description">Json Web Token is an internet standard through which
+                            users
+                            can prove their identity to web services and web apps.</span><span
+                            itemprop="www.schema.org/sameAs">sameAs</span></li>, <li
+                        typeof="www.schema.org/ComputerLanguage"> <span itemprop="name">JSPF</span><span
+                            itemprop="www.schema.org/description">JSPF stands for JSON Shareable Playlist Format and is
+                            a
+                            data-format for sharing music playlists.</span><span
+                            itemprop="www.schema.org/sameAs">sameAs</span></li>
+            </p>
+        </section>
+        </section>
+        <section>
+            <h3 itemprop="name">Feed <li typeof="www.schema.org/ComputerLanguage"> <span itemprop="name">RSS</span><span
+                        itemprop="www.schema.org/description">RSS is a web feed that enables users and web apps to
+                        receive ive updates from websites in a format that's both human and machine
+                        readable.</span><span itemprop="www.schema.org/sameAs">sameAs</span></li>
+            </h3>
+            <p>Printr-o functionalitate nereprezentata in interfata sistemul isi anunta utilizatorii la aparitia
+                fiecarei noi compilatii sau la actualizarea topului celor mai ascultate melodii ale lunii.</p>
+            <p>Tehnologii folosite:<ul>
+                    <li typeof="www.schema.org/ComputerLanguage""> <span itemprop=" name">
+                        HTML5</span><span itemprop="www.schema.org/description">HTML5 is a markup language used for
+                            structuring and presenting content on the World Wide Web.</span><span
+                            itemprop="www.schema.org/https:">https://www.w3.org/TR/2017/REC-html52-20171214</span></li>
+                    <li typeof="www.schema.org/ComputerLanguage"> <span
+                            itemprop="name">Ajax</span><span itemprop="www.schema.org/description">Ajax is a set of web
+                            development techniques using many web technologies on the client side to create asynchronous
+                            web
+                            applications. </span><span itemprop="www.schema.org/sameAs">sameAs</span></li>, <li
+                        typeof="www.schema.org/ComputerLanguage"> <span itemprop="name">PHP</span><span
+                            itemprop="www.schema.org/description">PHP is a general purpose, object-oriented proramming
+                            language mainly used in writing server-side scripts.</span><span
+                            itemprop="www.schema.org/sameAs">sameAs</span></li>, <li
+                        typeof="www.schema.org/ComputerLanguage"> <span itemprop="name">Mysql</span><span
+                            itemprop="www.schema.org/description">MySQL is an open-source relational database management
+                            system. Its name is a combination of "My", the name of co-founder Michael Widenius's
+                            daughter,
+                            and "SQL", </span><span itemprop="www.schema.org/sameAs">sameAs</span></li>, JSON, <li
+                        typeof="www.schema.org/ComputerLanguage"> <span itemprop="name">JWT</span><span
+                            itemprop="www.schema.org/description">Json Web Token is an internet standard through which
+                            users
+                            can prove their identity to web services and web apps.</span><span
+                            itemprop="www.schema.org/sameAs">sameAs</span></li>, <li
+                        typeof="www.schema.org/ComputerLanguage"> <span itemprop="name">RSS</span><span
+                            itemprop="www.schema.org/description">RSS is a web feed that enables users and web apps to
+                            receive ive updates from websites in a format that's both human and machine
+                            readable.</span><span itemprop="www.schema.org/sameAs">sameAs</span></li>, <li
+                        typeof="www.schema.org/ComputerLanguage"> <span itemprop="name">XML</span><span
+                            itemprop="www.schema.org/description">XML is a markup meta-language and family of languages
+                            derived from the earlier SGML format,</span><span
+                            itemprop="www.schema.org/sameAs">sameAs</span>
+                    </li>
+            </p>
+        </section>
+    </article>
+</body>
+<html>
+<!--Alexandru Ichim-->

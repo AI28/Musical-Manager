@@ -1,11 +1,34 @@
-function asyncRequest(){
+let database_views = [];
+let previous_page_section = -1;
+
+function generateDashboard(){
+    console.log("true");
+}
+
+function asyncRequest(parameter="", method, endpoint, payload='', evt=null){
+
     var ajaxRequest = new XMLHttpRequest();
-    ajaxRequest.open("GET", "/CContentGeneration/getProductions");
-    ajaxRequest.send();
+    console.log(parameter);
+    if(parameter != '')
+        ajaxRequest.open(method, endpoint+'/'+parameter);
+    else ajaxRequest.open(method, endpoint);
+
+    var actual_payload = (payload == null ? "" : payload)
+    if(method == 'POST')
+        ajaxRequest.send(payload);
+    else ajaxRequest.send();
 
     ajaxRequest.onload = function(){
-        if(this.readyState ===4 && this.status ===200)
-            addContentCard(generateContentCard(JSON.parse(this.responseText)));
+        if(this.readyState ===4 && this.status ===200){
+            switch(endpoint){
+                case "/CContentGeneration/getProductions":
+                    (JSON.parse(this.responseText)).forEach(element => addContentCard(generateContentCard(element)));
+                    break;
+                case "/CContentGeneration/likeSong":
+                    evt.target.parentNode.childNodes[0].innerText = JSON.parse(this.responseText).number_of_likes;
+                    break;
+            }
+        }
         else console.log(this.responseText);
     }
 }
@@ -22,31 +45,41 @@ function generateContentCard(jsonValues){
 
     var third_div = generateThirdDiv(jsonValues.number_of_likes);
     content_card.appendChild(third_div);
+    content_card.appendChild(generateFourthDiv(jsonValues.artist_name, jsonValues.song_title));
+
 
     return content_card;
 
 
-
-    function sendLike(evt){
+    function updateSongState(evt, firstOrderFunc){
         var action_div = evt.target.parentNode.parentNode.childNodes[1];
         var musical_production = ((action_div.childNodes[0].childNodes[1].innerHTML).split("-"));
-        var to_be_jsonized  = {
+        var to_be_jsonized = {
             artist_name: musical_production[0],
             song_title: musical_production[1]
         };
 
-        var ajaxRequest = new XMLHttpRequest();
-        ajaxRequest.open("PUT", "/CContentGeneration/likeSong");
-        ajaxRequest.send(JSON.stringify(to_be_jsonized));
+        firstOrderFunc(evt, JSON.stringify(to_be_jsonized));
 
-        ajaxRequest.onload = function(){
-            if(this.readyState === 4 && this.status === 200)
-                evt.target.parentNode.childNodes[0].innerText = JSON.parse(this.responseText).number_of_likes;
-            else{
-                console.log("failed");
-            }
-        }
+    }
+    function sendLike(evt, json_payload){
 
+       asyncRequest('','POST','/CContentGeneration/likeSong', json_payload ,evt);  
+
+    }
+
+    function playSong(evt, json_payload){
+        asyncRequest('','POST','/CContentGeneration/playSong', json_payload, evt)
+    }
+
+    function generateFourthDiv(artist_name, song_title){
+        var fourth_div = document.createElement('div');
+        var play_button = document.createElement('span');
+        play_button.classList.add('fa');
+        play_button.classList.add('fa-play');
+        play_button.addEventListener("click", function(){updateSongState(event, playSong);});
+        fourth_div.appendChild(play_button);
+        return fourth_div; 
     }
     function generateThirdDiv(number_of_likes) {
         var third_div = document.createElement('div');
@@ -122,6 +155,5 @@ function addContentCard(content_card){
 }
 
 
-asyncRequest();
-
+asyncRequest(0, "GET", "/CContentGeneration/getProductions");
 //Alexandru Ichim

@@ -10,15 +10,9 @@
         <link rel='icon' href='Images/1765391-music/svg/003-music.svg'>
     </head>
     <body>
-        <nav id='my-nav'>
-            <span id='logo'><img src='Images/1765391-music/svg/003-music.svg' alt=''></span>
-            <ul class='button-list'>
-             <li><a href='#' id='account'>Alexandru Ichim</a></li>
-             <li><a href='/Pages/test.php' id='live'>Live</a></li>
-             <li><a href='' id='music'>Music</a></li>
-             <li><a href='' id='stats'>Stats</a></li>
-            </ul>
-        </nav>
+        <?php
+        include_once("Partials".DIRECTORY_SEPARATOR."auth-navbar-partial.php");
+        ?>
         <h2>My listening history</h2>
         <main>
             <div class='content-card'>
@@ -42,6 +36,9 @@
                         <div class='stat'>
                             <div class='comment-value'>32</div>
                         </div>
+                    </div>
+                    <div>
+                        <span id="play" class="fa fa-play"></span>
                     </div>
             </div>
              <div class='content-card'>

@@ -45,6 +45,10 @@ class MNonAuth{
 
         return JWT::encode($token, JWT_PARAMS::$key);
     }
+
+    public function decodeJWTArray($jwt_token){
+        return JWT::decode($jwt_token, JWT_PARAMS::$key, array('HS256'));
+    }
 }
 //Alexandru Ichim
 ?>
