@@ -39,14 +39,6 @@ h2{
         justify-content: center;
     }
 }
-.remove-button, .comments-modal-main p::after, .favourite-songs li:not(.export-as)::after{
-    background-color: red;
-    content:'\f12d';
-    cursor: pointer;
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    margin: 0;
-}
 .export-as form{
     align-items: center;
     display: flex;
