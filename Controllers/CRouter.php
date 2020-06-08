@@ -6,6 +6,7 @@ class CRouter{
 
     private $requestUri;
     private $requestMethod;
+    private $getArgs;
     private $supportedMethodArray = array('GET', 'POST');
     private $get = [];
     private $post = [];
@@ -27,7 +28,11 @@ class CRouter{
         $this->requestUri = $args[0];
         $this->requestMethod = strtolower($name);
 
-        $controllerMethod = array(explode('/', $this->requestUri)[1],explode('/', $this->requestUri)[2]);
+        $request_array = explode('/',$this->requestUri);
+
+        $controllerMethod = array($request_array[1], $request_array[2]);
+        if(count($request_array) >= 4)
+            $this->getArgs = $request_array[3];
 
         switch($this->requestMethod){
             case "get":
@@ -42,11 +47,13 @@ class CRouter{
 
     function resolve(){
 
-        $test = $this->requestMethod;
-        $test1 = $this->requestUri;
-        $methodArray = $this->{$test}[$test1];
+        $method = $this->requestMethod;
+        $uri = $this->requestUri;
+        $methodArray = $this->{$method}[$uri];
         $test = new $methodArray[0];
-        $test->{$methodArray[1]}();
+        if(isset($this->getArgs) === False)
+            $test->{$methodArray[1]}();
+        else $test->{$methodArray[1]}($this->getArgs);
     }
 }
 //Alexandru Ichim

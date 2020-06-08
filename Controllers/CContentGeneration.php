@@ -11,7 +11,7 @@ class CContentGeneration{
     }
 
     public function test(){
-        echo json_encode(array("number_of_likes"=>$this->contentModel->existsEntity("songs","Master of Puppets")));
+        print_r($this->contentModel->getMusicalCatalogue(1));
     }
     public function likeSong(){
 
@@ -27,7 +27,7 @@ class CContentGeneration{
             echo json_encode($this->contentModel->likeSong($candidate_song->artist_name, $candidate_song->song_title));
         }
     }
-    public function getProductions(){
+    public function getProductions($offset){
         $json_array = NULL;
         if(isset($_COOKIE['jwt_token'])==False){ 
             http_response_code(401);
@@ -35,7 +35,7 @@ class CContentGeneration{
         }
         else{
             http_response_code(200);
-            $json_array = $this->contentModel->getMusicalCatalogue();
+            $json_array = $this->contentModel->getMusicalCatalogue($offset);
         }
         echo json_encode($json_array);
     }
