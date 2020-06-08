@@ -80,12 +80,16 @@ function addButtonListeners(){
                 var filePath = document.getElementById('upload-file').files[0];
                 var formData = new FormData();
                 formData.append('new_playlist', filePath, filePath.name);
+                console.log(JSON.stringify(Object.fromEntries(formData)));
                 var ajaxRequest = new XMLHttpRequest();
                 ajaxRequest.open('POST','/CContentGeneration/uploadPlaylist');
                 ajaxRequest.send(formData);
                 ajaxRequest.onload = function(){
-                    if(this.readyState == 4 && this.status == 200)
-                        console.log(this.responseText);
+                    if(this.readyState == 4 && this.status == 200){
+                        //Insert into DOM
+                        var playlist = JSON.parse((JSON.parse(this.responseText).payload));
+                        insertIntoDOM(playlist);
+                    }
                 }
             }
            else{
@@ -95,6 +99,30 @@ function addButtonListeners(){
                 download(filename+".jspf",cachedResponses[filename]);
            }
        }
+   }
+
+   function insertIntoDOM(jsonPlaylist){
+        var new_playlist = document.createElement("ul");
+        var playlist_name = document.createElement("h3");
+        playlist_name.innerHTML = jsonPlaylist.title;
+        new_playlist.appendChild(playlist_name);
+        var playlist_creator = document.createElement("h3");
+        playlist_creator.innerHTML = jsonPlaylist.creator;
+        new_playlist.appendChild(playlist_creator);
+
+        jsonPlaylist.track.forEach(function(element){
+            var list_item = document.createElement("li");
+            list_item.innerHTML = element.title + "-" + element.creator;
+
+            new_playlist.appendChild(list_item);
+        });
+        var export_button = document.createElement("li");
+        export_button.classList.add("fa");
+        export_button.classList.add("fa-chevron-down");
+        export_button.innerText = "Export as JSPF";
+        new_playlist.appendChild(export_button);
+        document.getElementsByClassName("favourite-songs")[0].appendChild(new_playlist);
+
    }
 
    function download(filename, text){
