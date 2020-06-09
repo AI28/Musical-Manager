@@ -134,6 +134,20 @@ class CContentGeneration{
         
         echo json_encode($this->contentModel->getDashboard($offset));
     }
+    public function getOwnHistory($offset=0){
+        $json_array = NULL;
+        $jwt_array = NULL;
+        $additionalMessage = NULL;
+        try{
+            $jwt_array = $this->authModel->decodeJWTArray($_COOKIE['jwt_token']);
+        }
+        catch(Exception $e){
+            $additionalMessage = $e->getMessage();
+            http_response_code(401);
+        }
+        
+        echo json_encode($this->contentModel->getDashboard($offset, $jwt_array->data->username));
+    }
 
     public function getSongs(){
 

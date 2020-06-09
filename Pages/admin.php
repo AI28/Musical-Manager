@@ -87,6 +87,7 @@
                 <form method="post" action="export_csv.php">
                     <input type="submit" name="export" value="CSV" />
                 </form>
+              <!--Palalae Stefan-->
             </li>
         </ul>
     </section>
@@ -132,12 +133,11 @@
             </form>
         </section>
     </section>
-    <script src='/Pages/Javascript/modal.js'></script>
-    <script src='/Pages/Javascript/stickyNav.js'></script>
-    <script src='/Pages/Javascript/exportJSPF.js'></script>
-</body>
-
+        <script src='/Pages/Javascript/modal.js'></script>
+        <script src='/Pages/Javascript/stickyNav.js'></script>
+        <script src='/Pages/Javascript/exportJSPF.js'></script>
+        <script src='/Pages/Javascript/generateContentCard.js'></script>
+    </body>
 </html>
 
 <!--Alexandru Ichim-->
-<!--Palalae Stefan-->
