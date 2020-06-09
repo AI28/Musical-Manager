@@ -9,8 +9,8 @@
         ?>
     </a></li>
      <li><a href='/Pages/dashboard.php' id='live'>Live</a></li>
-     <li><a href='' id='music'>Music</a></li>
-     <li><a href='' id='stats'>Stats</a></li>
+     <li><a href='/Pages/music.php' id='music'>Music</a></li>
+     <li><a href='/Pages/stats.php' id='stats'>Stats</a></li>
     </ul>
 </nav>
 

@@ -10,7 +10,7 @@ body {
     margin: 0;
 }
 
-main {
+main, #artists, #albums {
     align-items: center;
     display: flex;
     flex-flow: row wrap;
@@ -19,5 +19,7 @@ main {
     margin:30px 80px;
     text-align: center;
 }
+
+
 
 /* Alexandru Ichim*/

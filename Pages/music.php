@@ -24,6 +24,12 @@
             Concluzie: continut care nu se modifica: generat pe partea de server
                        continut care se modifica generat pe partea de client-->
         <main>
+            <div id='artists'>
+            </div>
+            <div id='albums'>
+            </div>
+            <div id='songs'>
+            </div>
         </main>
         <script src='/Pages/Javascript/modal.js'></script>
         <script src='/Pages/Javascript/stickyNav.js'></script>
