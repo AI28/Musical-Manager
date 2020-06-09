@@ -1,0 +1,15 @@
+span[typeof]{
+    display:none
+}
+section h3, h4, p{
+    display: block;
+}
+span[itemprop]{
+    display: none;
+}
+#university, span[itemprop="name"], h3, h4{
+    display: block;
+}
+
+
+//Alexandru Ichim

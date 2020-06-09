@@ -1,14 +1,5 @@
-<style>
-    ul#menu li {
-      display:inline;
-    }
-    h3 {
-        text-align: center;
-    }
-    </style>
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset='utf-8'>
     <title>MuM Interface Documentation</title>
@@ -64,8 +55,7 @@
         <section id='university'>
             <div typeof="https://www.schema.org/CollegeOrUniversity">
                 <h3 itemprop="name">Universitatea "Alexandru Ioan Cuza", Iasi, Facultatea de Informatica</h3>
-                <div itemprop="location" itemtype="https://www.schema.org/Place">Universitate Alexandru Ioan Cuza,
-                    Corpul C </div>
+                <div itemprop="location" itemtype="https://www.schema.org/Place">Universitate Alexandru Ioan Cuza, Corpul C </div>
                 <div itemprop="address" itemtype="https://www.schema.org/PostalAddress">
                     <span itemprop="addressLocality">Iasi </span>
                     <br>
@@ -76,51 +66,32 @@
         </section>
         <section>
             <h3>Introducere</h3>
-            <p>Aplicatia <span typeof="https://www.schema.org/SoftwareApplication"><span
-                        typeof="https:/www.schema.org/name"> MuM</span></span>, dezvoltata de echipa formata din Stefan
-                Palalae si Alexandru Ichim, are rolul de a agrega
+            <p>Aplicatia <span typeof="https://www.schema.org/SoftwareApplication"><span typeof="https:/www.schema.org/name"> MuM</span></span>, dezvoltata de echipa formata din Stefan Palalae si Alexandru Ichim, are rolul de a agrega
                 metadate muzicale, preluate din diferite surse web, intr-un sistem ce ofera utilizatorilor acestuia
                 posibilitatea de a vizualiza preferintele muzicale ale prietenilor lor si de a fii la curent cu ultimele
                 auditii muzicale si aparitii de albume si cantece. Sistemul isi duce la bun sfarsit menirea utilizand
                 diverse mecanisme ale ecosistemului web, printre care apelarea api-urilor externe, ale unor entitati
-                precum <span typeof="https://www.schema.org/SoftwareApplication"><a href="https://www.spotify.com"
-                        itemprop="https://www.schema.org/url">Spotify</a></span> sau <span
-                    typeof="https://www.schema.org/SoftwareApplication" itemprop="name"><a href="https://www.last.fm"
-                        itemprop="https://www.schema.org/url">Last.fm</a></span>, si feed-urile rss, utilizate pentru a
-                tine la curent utilizatorii cu minim
+                precum <span typeof="https://www.schema.org/SoftwareApplication"><a href="https://www.spotify.com" itemprop="https://www.schema.org/url">Spotify</a></span> sau <span typeof="https://www.schema.org/SoftwareApplication" itemprop="name"><a href="https://www.last.fm" itemprop="https://www.schema.org/url">Last.fm</a></span>, si feed-urile rss, utilizate pentru a tine la curent utilizatorii cu minim
                 de efort din partea acestora.</p>
         </section>
         <section>
             <h3>Landing page</h3>
-            <p>Prima interactiune a utilizatorului cu aplicatia web MuM se va face prin intermediul landing page-ului
-                prezentat mai jos. Prin apasarea butonului "Get started", utilizatorul initiaza o cerere pentru pagina
-                de inregistrare.
-                <img itemprop="https://www.schema.org/image" src="doc-pic-3.png"
-                    alt="O imagine care prezinta landing page-ul siteului.">
+            <p>Prima interactiune a utilizatorului cu aplicatia web MuM se va face prin intermediul landing page-ului prezentat mai jos. Prin apasarea butonului "Get started", utilizatorul initiaza o cerere pentru pagina de inregistrare.
+                <img itemprop="https://www.schema.org/image" src="doc-pic-3.png" alt="O imagine care prezinta landing page-ul siteului.">
             </p>
         </section>
         <section>
             <h3>Login si Register</h3>
-            <p>Utilizatorul neautentificat, pentru a putea beneficia de toate facilitatile oferite de aplicatia web, se
-                poate autentifica folosind formularul paginii web Login sau se poate inregistra in baza de date, in
-                cazul in care nu detine un cont.
-            <ul id="menu">
-                <li>
-                    <img itemprop="https://www.schema.org/image" src="doc-pic-4.png"
-                        alt="O imagine care prezinta pagina de inregistrare." style="width:500px;height:600px;">
-                </li>
-                <li>
-                    <img itemprop="https://www.schema.org/image" src="doc-pic-5.png"
-                        alt="O imagine care prezinta pagine de autentificare." style="width:500px;height:600px;">
-                </li>
-            </ul>
+            <p>Utilizatorul neautentificat, pentru a putea beneficia de toate facilitatile oferite de aplicatia web, se poate autentifica folosind formularul paginii web Login sau se poate inregistra in baza de date, in cazul in care nu detine un cont.
+                <img itemprop="https://www.schema.org/image" src="doc-pic-4.png" alt="O imagine care prezinta pagina de inregistrare.">
+                <br>
+                <img itemprop="https://www.schema.org/image" src="doc-pic-5.png" alt="O imagine care prezinta pagine de autentificare.">
             </p>
         </section>
         <section>
             <h3>News-feed</h3>
             <p>In sectiunea news-feed a aplicatiei, utilizatorul poate vizualiza ultimele auditii muzicale si ultimele
-                actualizari ale bazei de date de productii a sistemului. Utilizatorul autentificat poate aprecia si
-                adauga un comentariu la oricare dintre activitatile
+                actualizari ale bazei de date de productii a sistemului. Utilizatorul autentificat poate aprecia si adauga un comentariu la oricare dintre activitatile
                 reprezentate in news-feed. Utilizatorul neautentificat are doar posibilitatea de a viziona un news-feed
                 generalizat.
                 <img itemprop="https://www.schema.org/image" src="doc-pic-1.png"
@@ -140,13 +111,8 @@
         </section>
         <section>
             <h3>Sectiunea de administrare a propriului cont</h3>
-            <p>Un utilizator autentificat are acces la doua tipuri de activitati prin intermediul paginii de
-                administrare a propriului cont: in primul rand, poate importa in sistem si exporta din acesta
-                playlist-uri in format <span typeof="https://www.schema.org/ComputerLanguage"><span
-                        itemprop="https://www.schema.org/name">JSPF</span></span>.
-                In al doilea rand, acesta se poate angaja in diverse activitati de administrare a propriului cont: isi
-                poate schimba parola, numele de utilizator, poza de profil si in ultimul rand, isi poate radia contul
-                din baza de date.
+            <p>Un utilizator autentificat are acces la doua tipuri de activitati prin intermediul paginii de administrare a propriului cont: in primul rand, poate importa in sistem si exporta din acesta playlist-uri in format <span typeof="https://www.schema.org/ComputerLanguage"><span itemprop="https://www.schema.org/name">JSPF</span></span>.
+               In al doilea rand, acesta se poate angaja in diverse activitati de administrare a propriului cont: isi poate schimba parola, numele de utilizator, poza de profil si in ultimul rand, isi poate radia contul din baza de date.
                 <img itemprop="https://www.schema.org/image" src="doc-pic-6.png"
                     alt="O imagine care prezinta modalul de comentarii.">
             </p>
@@ -155,4 +121,4 @@
 </body>
 
 </html>
-<!--Ichim Alexandru-->
+<!--Alexandru Ichim-->
