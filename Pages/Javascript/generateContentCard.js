@@ -18,6 +18,7 @@ function asyncRequest(parameter = "", method, endpoint, payload = '', evt = null
                     (JSON.parse(this.responseText)).forEach(element => addContentCard(generateContentCard(element.artist_name, element.year, element.artist_name, element.song_title, element.title, element.metadata_value, element.year, element.number_of_likes)));
                     break;
                 case "/CContentGeneration/getHistory":
+                case "/CContentGeneration/getOwnHistory":
                     (JSON.parse(this.responseText)).forEach(element => addContentCard(generateContentCard(element.username, element.updated_at, element.artist_name, element.song_title, element.album_title, element.metadata_value, element.year, element.number_of_likes)));
                     break;
                 case "/CContentGeneration/getArtists":
@@ -176,6 +177,9 @@ switch(window.location.href){
     case("http://localhost:1027/Pages/dashboard.php"):
        asyncRequest(0, "GET", "/CContentGeneration/getHistory");
        break;
+    case("http://localhost:1027/Pages/admin.php"):
+        asyncRequest(0, "GET", "/CContentGeneration/getOwnHistory");
+        break;
     case("http://localhost:1027/Pages/music.php"):
        asyncRequest(0, "GET", "/CContentGeneration/getArtists");
        break;

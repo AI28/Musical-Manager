@@ -76,10 +76,17 @@ class MContent
         return $sql->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function getDashboard($offset)
+    public function getDashboard($offset, $username = null)
     {
-        $sql = DBConn::getConnection()->prepare("SELECT * FROM dashboard LIMIT 15 OFFSET :offset ");
-        $sql->execute(['offset' => $offset]);
+        $sql = NULL;
+        if(is_null($username)){
+           $sql=DBConn::getConnection()->prepare("SELECT * FROM dashboard LIMIT 15 OFFSET :offset ");
+           $sql->execute(['offset'=>$offset]);
+        } 
+        else{
+            $sql = DBConn::getConnection()->prepare("SELECT * FROM dashboard WHERE username = :username  LIMIT 15 OFFSET :offset");
+            $sql->execute(['offset'=>$offset, 'username'=>$username]);
+        }
         return $sql->fetchAll(PDO::FETCH_ASSOC);
     }
 

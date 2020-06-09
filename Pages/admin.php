@@ -69,6 +69,7 @@
         <script src='/Pages/Javascript/modal.js'></script>
         <script src='/Pages/Javascript/stickyNav.js'></script>
         <script src='/Pages/Javascript/exportJSPF.js'></script>
+        <script src='/Pages/Javascript/generateContentCard.js'></script>
     </body>
 </html>
 
